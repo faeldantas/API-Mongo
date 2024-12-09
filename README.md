@@ -2,7 +2,8 @@
 
 ### **Descrição**
 Este é um projeto inicial de uma API desenvolvida com **Node.js** e **MongoDB**. O objetivo desta API é demonstrar como aplicar os princípios da arquitetura REST em um ambiente simples, onde todas as funcionalidades estão concentradas em um único arquivo servidor.
-
+ 
+ 
 ### **Características**
 - Construída com **Express.js** para gerenciamento de rotas.
 - Utiliza **Mongoose** para a modelagem e interação com o banco de dados MongoDB.
