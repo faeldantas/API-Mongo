@@ -14,6 +14,20 @@ mongoose.connect("mongodb+srv://teste123:teste123@cluster0.cqy8e.mongodb.net/tre
     console.error('Erro ao conectar ao MongoDB', err);
 });
 
+// Criando um esquema de arquivo para o mongoDB
+const userSchema = new mongoose.Schema({
+    nome: { type: String, required: true },
+    email: { type: String, required: true, unique: true }
+});
+
+//Criando modelo de usuário
+const User = mongoose.model('User', userSchema, 'users');
+
+
+
+
+
+
 // **CREATE** - Rota para criar um novo usuário
 app.post('/usuarios', async(req, res) =>{
     try {
@@ -80,6 +94,12 @@ app.delete('/usuarios/:id', async (req, res) => {
         res.status(500).send('Erro ao deletar usuário');
     }
 });
+
+
+
+
+
+
 
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');
